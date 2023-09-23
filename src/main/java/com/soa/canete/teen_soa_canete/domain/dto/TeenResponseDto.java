@@ -19,7 +19,9 @@ public class TeenResponseDto  implements Serializable {
     @Column
     private String name;
     @Column
-    private String surname;
+    private String surnamefather;
+    @Column
+    private String surnamemother;
     @Column
     private String dni;
     @Column

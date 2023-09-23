@@ -12,7 +12,8 @@ public class TeenMapper {
     public static Teen toModel(TeenRequestDto dto) {
         return new Teen(
                 dto.getName(),
-                dto.getSurname(),
+                dto.getSurnamefather(),
+                dto.getSurnamemother(),
                 dto.getDni(),
                 dto.getEstado()
         );
@@ -22,7 +23,8 @@ public class TeenMapper {
         return new Teen(
                 id_adolescente,
                 dto.getName(),
-                dto.getSurname(),
+                dto.getSurnamefather(),
+                dto.getSurnamemother(),
                 dto.getDni(),
                 dto.getEstado()
         );
@@ -32,7 +34,8 @@ public class TeenMapper {
         return new TeenResponseDto(
                 model.getId_adolescente(),
                 model.getName(),
-                model.getSurname(),
+                model.getSurnamefather(),
+                model.getSurnamemother(),
                 model.getDni(),
                 model.getEstado()
         );

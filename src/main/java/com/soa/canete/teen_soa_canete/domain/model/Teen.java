@@ -18,15 +18,18 @@ public class Teen {
     @Column
     private String name;
     @Column
-    private String surname;
+    private String surnamefather;
+    @Column
+    private String surnamemother;
     @Column
     private String dni;
     @Column
     private String estado;
 
-    public Teen(String name, String surname, String dni, String estado) {
+    public Teen(String name, String surnamefather, String surnamemother, String dni, String estado) {
         this.name = name;
-        this.surname = surname;
+        this.surnamefather = surnamefather;
+        this.surnamemother = surnamemother;
         this.dni = dni;
         this.estado = estado;
     }
