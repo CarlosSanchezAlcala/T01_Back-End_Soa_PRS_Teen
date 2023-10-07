@@ -14,7 +14,7 @@ import org.springframework.data.relational.core.mapping.Table;
 public class Teen {
 
     @Id
-    private Integer id_adolescente;
+    private Integer id_teen;
     @Column
     private String name;
     @Column
@@ -24,13 +24,22 @@ public class Teen {
     @Column
     private String dni;
     @Column
-    private String estado;
+    private String phonenumber;
+    @Column
+    private String address;
+    @Column
+    private String email;
+    @Column
+    private String status;
 
-    public Teen(String name, String surnamefather, String surnamemother, String dni, String estado) {
+    public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber, String address, String email, String status) {
         this.name = name;
         this.surnamefather = surnamefather;
         this.surnamemother = surnamemother;
         this.dni = dni;
-        this.estado = estado;
+        this.phonenumber = phonenumber;
+        this.address = address;
+        this.email = email;
+        this.status = status;
     }
 }

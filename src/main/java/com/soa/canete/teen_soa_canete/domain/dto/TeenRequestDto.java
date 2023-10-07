@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 public class TeenRequestDto implements Serializable {
+
     @Serial
     private static final long serialVersionUID = 8222253670338491507L;
 
@@ -22,5 +23,11 @@ public class TeenRequestDto implements Serializable {
     @Column
     private String dni;
     @Column
-    private String estado;
+    private String phonenumber;
+    @Column
+    private String address;
+    @Column
+    private String email;
+    @Column
+    private String status;
 }

@@ -15,29 +15,38 @@ public class TeenMapper {
                 dto.getSurnamefather(),
                 dto.getSurnamemother(),
                 dto.getDni(),
-                dto.getEstado()
+                dto.getPhonenumber(),
+                dto.getAddress(),
+                dto.getEmail(),
+                dto.getStatus()
         );
     }
 
-    public static Teen toModel(TeenRequestDto dto, Integer id_adolescente) {
+    public static Teen toModel(TeenRequestDto dto, Integer id_teen) {
         return new Teen(
-                id_adolescente,
+                id_teen,
                 dto.getName(),
                 dto.getSurnamefather(),
                 dto.getSurnamemother(),
                 dto.getDni(),
-                dto.getEstado()
+                dto.getPhonenumber(),
+                dto.getAddress(),
+                dto.getEmail(),
+                dto.getStatus()
         );
     }
 
     public static TeenResponseDto toDto(Teen model) {
         return new TeenResponseDto(
-                model.getId_adolescente(),
+                model.getId_teen(),
                 model.getName(),
                 model.getSurnamefather(),
                 model.getSurnamemother(),
                 model.getDni(),
-                model.getEstado()
+                model.getPhonenumber(),
+                model.getAddress(),
+                model.getEmail(),
+                model.getStatus()
         );
     }
 

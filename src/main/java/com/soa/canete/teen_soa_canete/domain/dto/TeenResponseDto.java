@@ -11,11 +11,12 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 public class TeenResponseDto  implements Serializable {
+
     @Serial
     private static final long serialVersionUID = 8222253670338491507L;
 
     @Id
-    private Integer id_adolescente;
+    private Integer id_teen;
     @Column
     private String name;
     @Column
@@ -25,5 +26,11 @@ public class TeenResponseDto  implements Serializable {
     @Column
     private String dni;
     @Column
-    private String estado;
+    private String phonenumber;
+    @Column
+    private String address;
+    @Column
+    private String email;
+    @Column
+    private String status;
 }
