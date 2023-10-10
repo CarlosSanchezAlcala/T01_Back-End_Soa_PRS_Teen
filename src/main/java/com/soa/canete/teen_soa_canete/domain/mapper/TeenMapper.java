@@ -22,6 +22,7 @@ public class TeenMapper {
                 dto.getGender(),
                 dto.getCrime_committed(),
                 dto.getAttorney(),
+                dto.getCodubi(),
                 dto.getStatus()
         );
     }
@@ -40,6 +41,7 @@ public class TeenMapper {
                 dto.getGender(),
                 dto.getCrime_committed(),
                 dto.getAttorney(),
+                dto.getCodubi(),
                 dto.getStatus()
         );
     }
@@ -58,6 +60,7 @@ public class TeenMapper {
                 model.getGender(),
                 model.getCrime_committed(),
                 model.getAttorney(),
+                model.getCodubi(),
                 model.getStatus()
         );
     }

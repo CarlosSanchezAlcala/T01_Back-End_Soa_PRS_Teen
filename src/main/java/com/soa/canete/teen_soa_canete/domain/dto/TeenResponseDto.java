@@ -40,5 +40,7 @@ public class TeenResponseDto  implements Serializable {
     @Column
     private String attorney;
     @Column
+    private String codubi;
+    @Column
     private String status;
 }

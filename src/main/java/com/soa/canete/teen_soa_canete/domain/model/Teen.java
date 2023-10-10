@@ -38,11 +38,13 @@ public class Teen {
     @Column
     private String attorney;
     @Column
+    private String codubi;
+    @Column
     private String status;
 
     public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber,
                 String address, String email, String birthade, String gender, String crime_committed,
-                String attorney,String status)
+                String attorney,String codubi,String status)
     {
         this.name = name;
         this.surnamefather = surnamefather;
@@ -55,6 +57,7 @@ public class Teen {
         this.gender = gender;
         this.crime_committed = crime_committed;
         this.attorney = attorney;
+        this.codubi = codubi;
         this.status = status;
     }
 }
