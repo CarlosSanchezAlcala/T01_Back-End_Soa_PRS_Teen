@@ -29,5 +29,13 @@ public class TeenRequestDto implements Serializable {
     @Column
     private String email;
     @Column
+    private String birthade;
+    @Column
+    private String gender;
+    @Column
+    private String crime_committed;
+    @Column
+    private String attorney;
+    @Column
     private String status;
 }

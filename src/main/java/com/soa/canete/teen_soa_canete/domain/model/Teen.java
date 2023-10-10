@@ -30,9 +30,20 @@ public class Teen {
     @Column
     private String email;
     @Column
+    private String birthade;
+    @Column
+    private String gender;
+    @Column
+    private String crime_committed;
+    @Column
+    private String attorney;
+    @Column
     private String status;
 
-    public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber, String address, String email, String status) {
+    public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber,
+                String address, String email, String birthade, String gender, String crime_committed,
+                String attorney,String status)
+    {
         this.name = name;
         this.surnamefather = surnamefather;
         this.surnamemother = surnamemother;
@@ -40,6 +51,10 @@ public class Teen {
         this.phonenumber = phonenumber;
         this.address = address;
         this.email = email;
+        this.birthade = birthade;
+        this.gender = gender;
+        this.crime_committed = crime_committed;
+        this.attorney = attorney;
         this.status = status;
     }
 }

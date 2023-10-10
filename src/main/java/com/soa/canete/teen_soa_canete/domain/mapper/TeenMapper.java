@@ -18,6 +18,10 @@ public class TeenMapper {
                 dto.getPhonenumber(),
                 dto.getAddress(),
                 dto.getEmail(),
+                dto.getBirthade(),
+                dto.getGender(),
+                dto.getCrime_committed(),
+                dto.getAttorney(),
                 dto.getStatus()
         );
     }
@@ -32,6 +36,10 @@ public class TeenMapper {
                 dto.getPhonenumber(),
                 dto.getAddress(),
                 dto.getEmail(),
+                dto.getBirthade(),
+                dto.getGender(),
+                dto.getCrime_committed(),
+                dto.getAttorney(),
                 dto.getStatus()
         );
     }
@@ -46,6 +54,10 @@ public class TeenMapper {
                 model.getPhonenumber(),
                 model.getAddress(),
                 model.getEmail(),
+                model.getBirthade(),
+                model.getGender(),
+                model.getCrime_committed(),
+                model.getAttorney(),
                 model.getStatus()
         );
     }
