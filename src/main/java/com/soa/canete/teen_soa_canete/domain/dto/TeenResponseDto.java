@@ -7,6 +7,7 @@ import org.springframework.data.relational.core.mapping.Column;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -32,7 +33,7 @@ public class TeenResponseDto  implements Serializable {
     @Column
     private String email;
     @Column
-    private String birthade;
+    private LocalDate birthade;
     @Column
     private String gender;
     @Column

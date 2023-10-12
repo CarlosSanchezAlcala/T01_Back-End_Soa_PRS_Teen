@@ -7,6 +7,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.time.LocalDate;
+
 @Table(name = "teen")
 @Data
 @NoArgsConstructor
@@ -30,7 +32,7 @@ public class Teen {
     @Column
     private String email;
     @Column
-    private String birthade;
+    private LocalDate birthade;
     @Column
     private String gender;
     @Column
@@ -43,7 +45,7 @@ public class Teen {
     private String status;
 
     public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber,
-                String address, String email, String birthade, String gender, String crime_committed,
+                String address, String email, LocalDate birthade, String gender, String crime_committed,
                 String attorney,String codubi,String status)
     {
         this.name = name;
