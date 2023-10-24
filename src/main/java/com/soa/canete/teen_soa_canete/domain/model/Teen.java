@@ -37,8 +37,8 @@ public class Teen {
     private String gender;
     @Column
     private String crime_committed;
-    @Column
-    private String attorney;
+    @Column("id_attorney")
+    private Integer id_attorney;
     @Column
     private String codubi;
     @Column
@@ -46,7 +46,7 @@ public class Teen {
 
     public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber,
                 String address, String email, LocalDate birthade, String gender, String crime_committed,
-                String attorney,String codubi,String status)
+                Integer id_attorney,String codubi,String status)
     {
         this.name = name;
         this.surnamefather = surnamefather;
@@ -58,7 +58,7 @@ public class Teen {
         this.birthade = birthade;
         this.gender = gender;
         this.crime_committed = crime_committed;
-        this.attorney = attorney;
+        this.id_attorney = id_attorney;
         this.codubi = codubi;
         this.status = status;
     }

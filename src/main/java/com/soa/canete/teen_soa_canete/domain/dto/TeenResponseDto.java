@@ -38,8 +38,8 @@ public class TeenResponseDto  implements Serializable {
     private String gender;
     @Column
     private String crime_committed;
-    @Column
-    private String attorney;
+    @Column("id_attorney")
+    private Integer id_attorney;
     @Column
     private String codubi;
     @Column
