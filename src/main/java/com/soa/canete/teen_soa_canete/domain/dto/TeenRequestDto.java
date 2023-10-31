@@ -33,6 +33,8 @@ public class TeenRequestDto implements Serializable {
     private LocalDate birthade;
     @Column
     private String gender;
+    @Column("id_operativeunit")
+    private Integer id_operativeunit;
     @Column
     private String crime_committed;
     @Column("id_attorney")

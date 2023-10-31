@@ -35,6 +35,8 @@ public class Teen {
     private LocalDate birthade;
     @Column
     private String gender;
+    @Column("id_operativeunit")
+    private Integer id_operativeunit;
     @Column
     private String crime_committed;
     @Column("id_attorney")
@@ -45,8 +47,8 @@ public class Teen {
     private String status;
 
     public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber,
-                String address, String email, LocalDate birthade, String gender, String crime_committed,
-                Integer id_attorney,String codubi,String status)
+                String address, String email, LocalDate birthade, String gender, Integer id_operativeunit,
+                String crime_committed, Integer id_attorney,String codubi,String status)
     {
         this.name = name;
         this.surnamefather = surnamefather;
@@ -57,6 +59,7 @@ public class Teen {
         this.email = email;
         this.birthade = birthade;
         this.gender = gender;
+        this.id_operativeunit = id_operativeunit;
         this.crime_committed = crime_committed;
         this.id_attorney = id_attorney;
         this.codubi = codubi;
