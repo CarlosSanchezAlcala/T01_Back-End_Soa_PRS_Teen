@@ -51,6 +51,7 @@ public class TeenController {
         return this.teenService.deleteLogicalTeen(id_adolescente);
     }
 
+    // Metodo para poder realizar la transferencia (Idea Principal e Inicial)
     @PatchMapping("/transferTeen/{id_adolescente}")
     public Mono<TeenResponseDto> transferTeenData(@PathVariable Integer id_adolescente) {
         return this.teenService.transferTeenToSoa(id_adolescente);
