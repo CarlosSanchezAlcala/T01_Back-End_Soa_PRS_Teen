@@ -38,22 +38,27 @@ public class TeenController {
 
     @PostMapping
     public Mono<TeenResponseDto> saveNewDataTeen(@RequestBody TeenRequestDto dto) {
-        return this.teenService.saveNewLegalGuardian(dto);
+        return this.teenService.saveNewTeen(dto);
     }
 
     @PutMapping("/{id_adolescente}")
     public Mono<TeenResponseDto> updateDataTeen(@RequestBody TeenRequestDto dto, @PathVariable Integer id_adolescente) {
-        return this.teenService.updateLegalGuardian(dto, id_adolescente);
+        return this.teenService.updateTeen(dto, id_adolescente);
     }
 
     @PatchMapping("/deleteLogical/{id_adolescente}")
-    public Mono<TeenResponseDto> deleteLogicalTeen(@PathVariable Integer id_adolescente) {
-        return this.teenService.deleteLogicalLegalGuardian(id_adolescente);
+    public Mono<TeenResponseDto> deleteLogicalTeenData(@PathVariable Integer id_adolescente) {
+        return this.teenService.deleteLogicalTeen(id_adolescente);
+    }
+
+    @PatchMapping("/transferTeen/{id_adolescente}")
+    public Mono<TeenResponseDto> transferTeenData(@PathVariable Integer id_adolescente) {
+        return this.teenService.transferTeenToSoa(id_adolescente);
     }
 
     @PatchMapping("/reactiveLogical/{id_adolescente}")
-    public Mono<TeenResponseDto> reactiveLogicalTeen(@PathVariable Integer id_adolescente) {
-        return this.teenService.reactiveLogicalLegalGuardian(id_adolescente);
+    public Mono<TeenResponseDto> reactiveLogicalTeenData(@PathVariable Integer id_adolescente) {
+        return this.teenService.reactiveLogicalTeen(id_adolescente);
     }
 
     @DeleteMapping("/{id_adolescente}")

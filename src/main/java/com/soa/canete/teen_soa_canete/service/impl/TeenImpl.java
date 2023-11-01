@@ -54,13 +54,13 @@ public class TeenImpl implements TeenService {
     }
 
     @Override
-    public Mono<TeenResponseDto> saveNewLegalGuardian(TeenRequestDto request) {
+    public Mono<TeenResponseDto> saveNewTeen(TeenRequestDto request) {
         return this.teenRepository.save(toModel(request))
                 .map(TeenMapper::toDto);
     }
 
     @Override
-    public Mono<TeenResponseDto> updateLegalGuardian(TeenRequestDto request, Integer id_teen) {
+    public Mono<TeenResponseDto> updateTeen(TeenRequestDto request, Integer id_teen) {
         return this.teenRepository.findById(id_teen)
                 .switchIfEmpty(Mono.error(new ResourceNotFoundException("El identificador: " + id_teen + " no fue encontrado")))
                 .flatMap((dataTeen) -> this.teenRepository.save(toModel(request, dataTeen.getId_teen())))
@@ -68,7 +68,7 @@ public class TeenImpl implements TeenService {
     }
 
     @Override
-    public Mono<TeenResponseDto> deleteLogicalLegalGuardian(Integer id_teen) {
+    public Mono<TeenResponseDto> deleteLogicalTeen(Integer id_teen) {
         return this.teenRepository.findById(id_teen)
                 .map((delete) -> {
                     delete.setStatus("I");
@@ -79,7 +79,18 @@ public class TeenImpl implements TeenService {
     }
 
     @Override
-    public Mono<TeenResponseDto> reactiveLogicalLegalGuardian(Integer id_teen) {
+    public Mono<TeenResponseDto> transferTeenToSoa(Integer id_teen) {
+        return this.teenRepository.findById(id_teen)
+                .map((transfer) -> {
+                    transfer.setStatus("T");
+                    return transfer;
+                })
+                .flatMap(teenRepository::save)
+                .map(TeenMapper::toDto);
+    }
+
+    @Override
+    public Mono<TeenResponseDto> reactiveLogicalTeen(Integer id_teen) {
         return this.teenRepository.findById(id_teen)
                 .map((reactive) -> {
                     reactive.setStatus("A");

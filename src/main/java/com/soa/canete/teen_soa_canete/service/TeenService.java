@@ -13,10 +13,11 @@ public interface TeenService {
     Flux<TeenResponseDto> findAll();
     Flux<TeenResponseDto> findAllActive();
     Flux<TeenResponseDto> findAllInactive();
-    Mono<TeenResponseDto> saveNewLegalGuardian(TeenRequestDto request);
-    Mono<TeenResponseDto> updateLegalGuardian(TeenRequestDto request, Integer id_teen);
-    Mono<TeenResponseDto> deleteLogicalLegalGuardian(Integer id_teen);
-    Mono<TeenResponseDto> reactiveLogicalLegalGuardian(Integer id_teen);
+    Mono<TeenResponseDto> saveNewTeen(TeenRequestDto request);
+    Mono<TeenResponseDto> updateTeen(TeenRequestDto request, Integer id_teen);
+    Mono<TeenResponseDto> deleteLogicalTeen(Integer id_teen);
+    Mono<TeenResponseDto> transferTeenToSoa(Integer id_teen);
+    Mono<TeenResponseDto> reactiveLogicalTeen(Integer id_teen);
     Mono<Void> deleteLegalGuardian(Integer id_teen);
 
 }
