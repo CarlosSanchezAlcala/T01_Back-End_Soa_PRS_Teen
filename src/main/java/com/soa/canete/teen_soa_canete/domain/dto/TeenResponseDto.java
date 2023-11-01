@@ -36,6 +36,8 @@ public class TeenResponseDto  implements Serializable {
     private LocalDate birthade;
     @Column
     private String gender;
+    @Column("id_operativeunit")
+    private Integer id_operativeunit;
     @Column
     private Integer id_operativeunit;
     @Column("crime_committed")          // Name in the DB PostgreSQL

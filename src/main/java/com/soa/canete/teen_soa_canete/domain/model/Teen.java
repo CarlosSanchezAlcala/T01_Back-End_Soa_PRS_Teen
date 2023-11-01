@@ -19,14 +19,14 @@ public class Teen {
     private Integer id_teen;
     @Column
     private String name;
-    @Column("surnamefather")            // Name in the DB PostgreSQL
-    private String surnameFather;
-    @Column("surnamemother")            // Name in the DB PostgreSQL
-    private String surnameMother;
+    @Column
+    private String surnamefather;
+    @Column
+    private String surnamemother;
     @Column
     private String dni;
-    @Column("phonenumber")              // Name in the DB PostgreSQL
-    private String phoneNumber;
+    @Column
+    private String phonenumber;
     @Column
     private String address;
     @Column
@@ -36,31 +36,28 @@ public class Teen {
     @Column
     private String gender;
     @Column
-    private Integer id_operativeunit;
-    @Column("crime_committed")          // Name in the DB PostgreSQL
-    private String crimeCommitted;
-    @Column
+    private String crime_committed;
+    @Column("id_attorney")
     private Integer id_attorney;
     @Column
     private String codubi;
     @Column
     private String status;
 
-    public Teen(String name, String surnameFather, String surnameMother, String dni, String phoneNumber,
-                String address, String email, LocalDate birthade, String gender, Integer id_operativeunit,
-                String crimeCommitted, Integer id_attorney,String codubi,String status)
+    public Teen(String name, String surnamefather, String surnamemother, String dni, String phonenumber,
+                String address, String email, LocalDate birthade, String gender, String crime_committed,
+                Integer id_attorney,String codubi,String status)
     {
         this.name = name;
-        this.surnameFather = surnameFather;
-        this.surnameMother = surnameMother;
+        this.surnamefather = surnamefather;
+        this.surnamemother = surnamemother;
         this.dni = dni;
-        this.phoneNumber = phoneNumber;
+        this.phonenumber = phonenumber;
         this.address = address;
         this.email = email;
         this.birthade = birthade;
         this.gender = gender;
-        this.id_operativeunit = id_operativeunit;
-        this.crimeCommitted = crimeCommitted;
+        this.crime_committed = crime_committed;
         this.id_attorney = id_attorney;
         this.codubi = codubi;
         this.status = status;
