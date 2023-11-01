@@ -20,13 +20,13 @@ public class TeenResponseDto  implements Serializable {
     private Integer id_teen;
     @Column
     private String name;
-    @Column("surnamefather")            // Name in the DB PostgreSQL
+    @Column("surnamefather")
     private String surnameFather;
-    @Column("surnamemother")            // Name in the DB PostgreSQL
+    @Column("surnamemother")
     private String surnameMother;
     @Column
     private String dni;
-    @Column("phonenumber")              // Name in the DB PostgreSQL
+    @Column("phonenumber")
     private String phoneNumber;
     @Column
     private String address;
@@ -36,11 +36,9 @@ public class TeenResponseDto  implements Serializable {
     private LocalDate birthade;
     @Column
     private String gender;
-    @Column("id_operativeunit")
-    private Integer id_operativeunit;
     @Column
     private Integer id_operativeunit;
-    @Column("crime_committed")          // Name in the DB PostgreSQL
+    @Column("crime_committed")
     private String crimeCommitted;
     @Column
     private Integer id_attorney;
