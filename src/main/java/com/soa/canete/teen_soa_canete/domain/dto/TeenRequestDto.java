@@ -17,14 +17,14 @@ public class TeenRequestDto implements Serializable {
 
     @Column
     private String name;
-    @Column
-    private String surnamefather;
-    @Column
-    private String surnamemother;
+    @Column("surnamefather")            // Name in the DB PostgreSQL
+    private String surnameFather;
+    @Column("surnamemother")            // Name in the DB PostgreSQL
+    private String surnameMother;
     @Column
     private String dni;
-    @Column
-    private String phonenumber;
+    @Column("phonenumber")              // Name in the DB PostgreSQL
+    private String phoneNumber;
     @Column
     private String address;
     @Column
@@ -34,8 +34,10 @@ public class TeenRequestDto implements Serializable {
     @Column
     private String gender;
     @Column
-    private String crime_committed;
-    @Column("id_attorney")
+    private Integer id_operativeunit;
+    @Column("crime_committed")          // Name in the DB PostgreSQL
+    private String crimeCommitted;
+    @Column
     private Integer id_attorney;
     @Column
     private String codubi;
