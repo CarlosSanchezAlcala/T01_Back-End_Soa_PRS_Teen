@@ -10,14 +10,23 @@ import reactor.core.publisher.Mono;
 public interface TeenService {
 
     Mono<TeenResponseDto> findById(Integer id_teen);
+
     Flux<TeenResponseDto> findAll();
+
     Flux<TeenResponseDto> findAllActive();
+
     Flux<TeenResponseDto> findAllInactive();
+
     Mono<TeenResponseDto> saveNewTeen(TeenRequestDto request);
+
     Mono<TeenResponseDto> updateTeen(TeenRequestDto request, Integer id_teen);
+
     Mono<TeenResponseDto> deleteLogicalTeen(Integer id_teen);
+
     Mono<TeenResponseDto> transferTeenToSoa(Integer id_teen);
+
     Mono<TeenResponseDto> reactiveLogicalTeen(Integer id_teen);
+
     Mono<Void> deleteLegalGuardian(Integer id_teen);
 
 }

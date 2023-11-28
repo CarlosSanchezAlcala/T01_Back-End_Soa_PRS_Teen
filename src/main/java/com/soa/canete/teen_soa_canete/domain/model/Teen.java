@@ -48,8 +48,7 @@ public class Teen {
 
     public Teen(String name, String surnameFather, String surnameMother, String dni, String phoneNumber,
                 String address, String email, LocalDate birthade, String gender, Integer id_operativeunit,
-                String crimeCommitted, Integer id_attorney,String codubi,String status)
-    {
+                String crimeCommitted, Integer id_attorney, String codubi, String status) {
         this.name = name;
         this.surnameFather = surnameFather;
         this.surnameMother = surnameMother;
