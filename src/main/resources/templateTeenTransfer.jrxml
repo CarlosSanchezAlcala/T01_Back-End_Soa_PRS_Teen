@@ -2,9 +2,9 @@
 <!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TeenTransfer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d1bd348e-b015-46c0-9170-e19146a210e1">
 	<property name="com.jaspersoft.studio.data.sql.tables">
-		<![CDATA[dWJpZ2VvICwxNSw1NixkYTZkYmNlYy0wZDY3LTQ3M2QtYWM4MS1lNGQwYTljMWRkZmI7dGVlbiAs
-MTg1LDI4LDcwZjU0ZGE3LWFmOWYtNGYwNS1hYjVkLTRmYjdlYzM4MGQ3MjtvcGVyYXRpdmVfdW5p
-dCAsMTUsMjUwLDNiNDMxODc4LTE2ZjEtNDFkNS05YzAyLTU3OTAxODkzMjljOTs=]]>
+		<![CDATA[dWJpZ2VvICwxNSw1Niw5YzQyYzkyOC1jYmEwLTRmZGMtOGEwNi1kZDViMTU3ODgwZDM7dGVlbiAs
+MTg1LDE1LGQ4YWNiZTYwLTI3NzQtNDQ4YS05ZGEwLTViZjQ1ZTUxZDZiNztvcGVyYXRpdmVfdW5p
+dCAsMTUsMjUwLGMxMjdjYzEwLTg1NzYtNGJhNC1hMTU4LTRkNzkzNGE5NWI1MTs=]]>
 	</property>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter">
 		<![CDATA[DataSOA's]]>
@@ -12,16 +12,21 @@ dCAsMTUsMjUwLDNiNDMxODc4LTE2ZjEtNDFkNS05YzAyLTU3OTAxODkzMjljOTs=]]>
 	<queryString language="SQL">
 		<![CDATA[SELECT *
 FROM teen t
-	INNER JOIN ubigeo u ON 
-	 u.codubi = t.codubi 
-	INNER JOIN operative_unit ou ON 
-	 ou.id_operativeunit = t.id_operativeunit 
-WHERE 
+	INNER JOIN ubigeo u ON
+	 u.codubi = t.codubi
+	INNER JOIN operative_unit ou ON
+	 ou.id_operativeunit = t.id_operativeunit
+WHERE
 	 t.status = 'T']]>
 	</queryString>
 	<field name="id_teen" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="id_teen"/>
 		<property name="com.jaspersoft.studio.field.label" value="id_teen"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="teen"/>
+	</field>
+	<field name="uuid_teen" class="java.util.UUID">
+		<property name="com.jaspersoft.studio.field.name" value="uuid_teen"/>
+		<property name="com.jaspersoft.studio.field.label" value="uuid_teen"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="teen"/>
 	</field>
 	<field name="name" class="java.lang.String">
@@ -94,7 +99,7 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="status"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="teen"/>
 	</field>
-	<field name="COLUMN_16" class="java.lang.String">
+	<field name="COLUMN_17" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="codubi"/>
 		<property name="com.jaspersoft.studio.field.label" value="codubi"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="ubigeo"/>
@@ -114,17 +119,17 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="distri"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="ubigeo"/>
 	</field>
-	<field name="COLUMN_20" class="java.lang.String">
+	<field name="COLUMN_21" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="status"/>
 		<property name="com.jaspersoft.studio.field.label" value="status"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="ubigeo"/>
 	</field>
-	<field name="COLUMN_21" class="java.lang.Integer">
+	<field name="COLUMN_22" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="id_operativeunit"/>
 		<property name="com.jaspersoft.studio.field.label" value="id_operativeunit"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="operative_unit"/>
 	</field>
-	<field name="COLUMN_22" class="java.lang.String">
+	<field name="COLUMN_23" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="name"/>
 		<property name="com.jaspersoft.studio.field.label" value="name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="operative_unit"/>
@@ -134,17 +139,17 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="id_funcionary"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="operative_unit"/>
 	</field>
-	<field name="COLUMN_24" class="java.lang.String">
+	<field name="COLUMN_25" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="phonenumber"/>
 		<property name="com.jaspersoft.studio.field.label" value="phonenumber"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="operative_unit"/>
 	</field>
-	<field name="COLUMN_25" class="java.lang.String">
+	<field name="COLUMN_26" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="address"/>
 		<property name="com.jaspersoft.studio.field.label" value="address"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="operative_unit"/>
 	</field>
-	<field name="COLUMN_26" class="java.lang.String">
+	<field name="COLUMN_27" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="status"/>
 		<property name="com.jaspersoft.studio.field.label" value="status"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="operative_unit"/>
@@ -295,13 +300,6 @@ WHERE
 				<textFieldExpression><![CDATA[$F{phonenumber}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="315" y="0" width="88" height="23" uuid="0a9c9aa7-fb9e-41f9-b44d-ed2ec0e0fe0a">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85244b88-bf5f-4532-bc90-26c20be509f1"/>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{COLUMN_22}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement x="403" y="0" width="62" height="23" uuid="99f1367c-1dbe-4707-bff6-dfcc8d8acc47">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f06f913-74a4-4fe6-9b41-be205ece8c0e"/>
 				</reportElement>
@@ -314,6 +312,13 @@ WHERE
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{birthade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="0" width="90" height="23" uuid="bf9ed040-663d-48a1-9dd0-779e1163465e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c1203703-8aca-47a4-b1d8-ef683bf8d3ba"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_23}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

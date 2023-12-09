@@ -7,6 +7,8 @@ import org.springframework.data.relational.core.mapping.Column;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -15,6 +17,8 @@ public class TeenRequestDto implements Serializable {
     @Serial
     private static final long serialVersionUID = 8222253670338491507L;
 
+    @Column
+    private UUID uuid_teen;
     @Column
     private String name;
     @Column("surnamefather")
@@ -41,6 +45,8 @@ public class TeenRequestDto implements Serializable {
     private Integer id_attorney;
     @Column
     private String codubi;
+    @Column
+    private LocalDateTime date_hour_register;
     @Column
     private String status;
 }
