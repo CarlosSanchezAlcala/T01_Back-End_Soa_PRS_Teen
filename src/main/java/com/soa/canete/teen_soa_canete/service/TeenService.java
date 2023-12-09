@@ -11,6 +11,8 @@ import java.util.UUID;
 @Service
 public interface TeenService {
 
+    Mono<TeenResponseDto> findByIdTeen(Integer id_teen);
+
     Mono<TeenResponseDto> findTwoWayIdTeen(UUID uuid_teen);
 
     Flux<TeenResponseDto> findAll();

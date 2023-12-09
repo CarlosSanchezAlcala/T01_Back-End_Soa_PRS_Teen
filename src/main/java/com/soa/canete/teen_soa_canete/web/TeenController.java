@@ -18,6 +18,11 @@ public class TeenController {
 
     final TeenService teenService;
 
+    @GetMapping("/listUnique/{id_teen}")
+    public Mono<TeenResponseDto> getDataTeenForIdPrincipal(@PathVariable Integer id_teen) {
+        return this.teenService.findByIdTeen(id_teen);
+    }
+
     @GetMapping("/{uuid_teen}")
     public Mono<TeenResponseDto> getDataTeenById(@PathVariable UUID uuid_teen) {
         return this.teenService.findTwoWayIdTeen(uuid_teen);

@@ -26,6 +26,12 @@ public class TeenImpl implements TeenService {
     final TeenRepository teenRepository;
 
     @Override
+    public Mono<TeenResponseDto> findByIdTeen(Integer id_teen) {
+        return this.teenRepository.findById(id_teen)
+                .map(TeenMapper::toDto);
+    }
+
+    @Override
     public Mono<TeenResponseDto> findTwoWayIdTeen(UUID uuid_teen) {
         return this.teenRepository.findByidentifier(uuid_teen)
                 .map(TeenMapper::toDto);
