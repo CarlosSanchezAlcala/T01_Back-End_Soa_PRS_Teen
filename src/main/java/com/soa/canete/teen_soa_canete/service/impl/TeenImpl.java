@@ -14,6 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.Comparator;
+import java.util.UUID;
 
 import static com.soa.canete.teen_soa_canete.domain.mapper.TeenMapper.toModel;
 
@@ -25,8 +26,8 @@ public class TeenImpl implements TeenService {
     final TeenRepository teenRepository;
 
     @Override
-    public Mono<TeenResponseDto> findById(Integer id_teen) {
-        return this.teenRepository.findById(id_teen)
+    public Mono<TeenResponseDto> findTwoWayIdTeen(UUID uuid_teen) {
+        return this.teenRepository.findByidentifier(uuid_teen)
                 .map(TeenMapper::toDto);
     }
 

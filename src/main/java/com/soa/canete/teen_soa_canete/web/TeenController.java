@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.UUID;
+
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/teenData")
@@ -16,9 +18,9 @@ public class TeenController {
 
     final TeenService teenService;
 
-    @GetMapping("/{id_adolescente}")
-    public Mono<TeenResponseDto> getDataTeenById(@PathVariable Integer id_adolescente) {
-        return this.teenService.findById(id_adolescente);
+    @GetMapping("/{uuid_teen}")
+    public Mono<TeenResponseDto> getDataTeenById(@PathVariable UUID uuid_teen) {
+        return this.teenService.findTwoWayIdTeen(uuid_teen);
     }
 
     @GetMapping("/listData")

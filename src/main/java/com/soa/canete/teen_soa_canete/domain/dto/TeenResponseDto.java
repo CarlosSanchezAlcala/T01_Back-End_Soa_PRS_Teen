@@ -13,15 +13,15 @@ import java.util.UUID;
 
 @Data
 @AllArgsConstructor
-public class TeenResponseDto  implements Serializable {
+public class TeenResponseDto implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 8222253670338491507L;
 
     @Id
     private Integer id_teen;
-    @Column
-    private UUID uuid_teen;
+    @Column("uuid_teen")
+    private UUID identifier;
     @Column
     private String name;
     @Column("surnamefather")

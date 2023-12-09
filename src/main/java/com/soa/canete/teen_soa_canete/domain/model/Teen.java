@@ -19,8 +19,8 @@ public class Teen {
 
     @Id
     private Integer id_teen;
-    @Column
-    private UUID uuid_teen;
+    @Column("uuid_teen")
+    private UUID identifier;
     @Column
     private String name;
     @Column("surnamefather")
@@ -52,10 +52,10 @@ public class Teen {
     @Column
     private String status;
 
-    public Teen(UUID uuid_teen ,String name, String surnameFather, String surnameMother, String dni, String phoneNumber,
+    public Teen(UUID identifier, String name, String surnameFather, String surnameMother, String dni, String phoneNumber,
                 String address, String email, LocalDate birthade, String gender, Integer id_operativeunit,
                 String crimeCommitted, Integer id_attorney, String codubi, LocalDateTime date_hour_register, String status) {
-        this.uuid_teen = uuid_teen;
+        this.identifier = identifier;
         this.name = name;
         this.surnameFather = surnameFather;
         this.surnameMother = surnameMother;

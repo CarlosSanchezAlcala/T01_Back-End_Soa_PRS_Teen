@@ -6,10 +6,12 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.UUID;
+
 @Service
 public interface TeenService {
 
-    Mono<TeenResponseDto> findById(Integer id_teen);
+    Mono<TeenResponseDto> findTwoWayIdTeen(UUID uuid_teen);
 
     Flux<TeenResponseDto> findAll();
 
