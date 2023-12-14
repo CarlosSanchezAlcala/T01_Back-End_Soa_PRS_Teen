@@ -7,9 +7,12 @@ import com.soa.canete.teen_soa_canete.domain.model.Teen;
 import com.soa.canete.teen_soa_canete.exception.ResourceNotFoundException;
 import com.soa.canete.teen_soa_canete.repository.TeenRepository;
 import com.soa.canete.teen_soa_canete.service.TeenService;
+import com.soa.canete.teen_soa_canete.util.TeenReportGenerator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -24,6 +27,13 @@ import static com.soa.canete.teen_soa_canete.domain.mapper.TeenMapper.toModel;
 public class TeenImpl implements TeenService {
 
     final TeenRepository teenRepository;
+    private TeenReportGenerator teenReportGenerator;
+
+    @Autowired
+    public TeenImpl(TeenRepository teenRepository, TeenReportGenerator teenReportGenerator) {
+        this.teenRepository = teenRepository;
+        this.teenReportGenerator = teenReportGenerator;
+    }
 
     @Override
     public Mono<TeenResponseDto> findByIdTeen(Integer id_teen) {
@@ -106,9 +116,14 @@ public class TeenImpl implements TeenService {
                 .flatMap(teenRepository::save)
                 .map(TeenMapper::toDto);
     }
-
     @Override
     public Mono<Void> deleteLegalGuardian(Integer id_teen) {
         return this.teenRepository.deleteById(id_teen);
+    }
+    @Override
+    public Mono<Mono<byte[]>> exportPdf() {
+        return teenRepository.findAll()
+                .collectList()
+                .map(teenReportGenerator::exportToPdf);
     }
 }
