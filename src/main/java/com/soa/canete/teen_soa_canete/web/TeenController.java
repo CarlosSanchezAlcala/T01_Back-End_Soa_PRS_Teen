@@ -5,7 +5,10 @@ import com.soa.canete.teen_soa_canete.domain.dto.TeenResponseDto;
 import com.soa.canete.teen_soa_canete.service.TeenService;
 
 import lombok.RequiredArgsConstructor;
-
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -78,6 +81,16 @@ public class TeenController {
     @DeleteMapping("/{id_adolescente}")
     public Mono<Void> deleteCompleteTeen(@PathVariable Integer id_adolescente) {
         return this.teenService.deleteLegalGuardian(id_adolescente);
+    }
+    @GetMapping("/export-pdf")
+    public Mono<ResponseEntity<byte[]>> exportPdf() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_PDF);
+        headers.setContentDispositionFormData("Adolescentes", "Adolescentes.pdf");
+
+        return teenService.exportPdf()
+                .flatMap(pdfBytes -> pdfBytes)
+                .map(pdfBytes -> ResponseEntity.ok().headers(headers).body(pdfBytes));
     }
 
 }

@@ -33,4 +33,6 @@ public interface TeenService {
 
     Mono<Void> deleteLegalGuardian(Integer id_teen);
 
+    Mono<Mono<byte[]>> exportPdf();
+
 }
