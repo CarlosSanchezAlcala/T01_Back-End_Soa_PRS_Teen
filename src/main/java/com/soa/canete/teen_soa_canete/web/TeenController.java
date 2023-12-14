@@ -3,6 +3,7 @@ package com.soa.canete.teen_soa_canete.web;
 import com.soa.canete.teen_soa_canete.domain.dto.TeenRequestDto;
 import com.soa.canete.teen_soa_canete.domain.dto.TeenResponseDto;
 import com.soa.canete.teen_soa_canete.service.TeenService;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -10,6 +11,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
