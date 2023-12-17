@@ -5,6 +5,6 @@ spring:
   r2dbc:
     url: r2dbc:postgres://localhost:5432/soa_canete_2023_rey_hugo_carlos
     username: postgres
-    password: root
+    password: 7382993232@
   datasource:
     driver-class-name: org.postgresql.Driver
