@@ -4,20 +4,29 @@
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
     <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
         <box>
-            <topPen lineWidth="0.5" lineColor="#000000"/>
-            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <pen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <topPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <leftPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <bottomPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <rightPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
         </box>
     </style>
     <style name="Table_CH" mode="Opaque" backcolor="#1783C4">
         <box>
-            <topPen lineWidth="0.5" lineColor="#000000"/>
-            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <pen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <topPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <leftPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <bottomPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <rightPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
         </box>
     </style>
     <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
         <box>
-            <topPen lineWidth="0.5" lineColor="#000000"/>
-            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <pen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <topPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <leftPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <bottomPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+            <rightPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
         </box>
     </style>
     <subDataset name="DataTable" uuid="ef48069c-d298-4b27-bd77-3635c675bcb6">
