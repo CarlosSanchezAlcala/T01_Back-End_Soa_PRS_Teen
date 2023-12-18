@@ -1,4 +1,3 @@
-/*
 package com.soa.canete.teen_soa_canete.config;
 
 import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
@@ -54,4 +53,3 @@ public class SecurityConfiguration {
     }
 
 }
-*/
