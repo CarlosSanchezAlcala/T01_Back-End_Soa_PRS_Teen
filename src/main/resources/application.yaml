@@ -2,16 +2,16 @@ server:
   port: 8082
 
 spring:
-  #main:
-    #allow-bean-definition-overriding: true
+  main:
+    allow-bean-definition-overriding: true
   r2dbc:
     url: r2dbc:postgres://localhost:5432/soa_canete_2023_rey_hugo_carlos
     username: postgres
     password: 7382993232@
-  #security:
-    #oauth2:
-      #resourceserver:
-        #jwt:
-          #issuer-uri: http://localhost:9091/realms/SOA
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9091/realms/SOA
   datasource:
     driver-class-name: org.postgresql.Driver

@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/teenData")
 @RequiredArgsConstructor
 public class TeenController {
