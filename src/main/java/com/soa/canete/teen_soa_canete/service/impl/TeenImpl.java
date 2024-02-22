@@ -37,6 +37,7 @@ public class TeenImpl implements TeenService {
 
     @Override
     public Mono<TeenResponseDto> findByIdTeen(Integer id_teen) {
+        // Method by search teen by Id
         return this.teenRepository.findById(id_teen)
                 .map(TeenMapper::toDto);
     }
